@@ -1,1 +1,3 @@
-angular.module('adminApp',[]);
+(function () {
+	angular.module('adminApp',[]);
+}());
