@@ -2,7 +2,7 @@
     <html ng-app>
     <head>
       <meta charset="UTF-8">
-      <title>AdminLTE 2 | Dashboard</title>
+      <title>Hardwera</title>
       <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
       <!-- Bootstrap 3.3.2 -->
       <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
@@ -37,7 +37,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
             <![endif]-->
           </head>
-          <body class="skin-blue" ng-init="categories= [{id:'123', user:'shashi', date:'2014-07-12', status: 'approved', reason: 'lkscla'},{id:'456', user:'aseem', date:'2013-01-02', status: 'failed', reason: 'bjhcjsbcj'},{id:'789', user:'sajal', date:'2016-03-01', status: 'pending', reason: 'kjahsijkanm'},{id:'143', user:'maximus', date:'2002-01-08', status: 'corrupted', reason: 'dskjcbka,nm'},{id:'233', user:'munshi', date:'2004-03-10', status: 'chomu', reason: 'lkajsiodlksjh'}]">
+          <body class="skin-blue" ng-controller="CategoriesController">
             <div class="wrapper">
               <header class="main-header">
                 <!-- Logo -->
@@ -152,11 +152,11 @@
                               <div class="box-body table-responsive no-padding">
                                 <table class="table table-hover">
                                   <tr>
-                                    <th ng-click="sortBy='id';reverse=!reverse">ID</th>
-                                    <th ng-click="sortBy='user';reverse=!reverse">User</th>
-                                    <th ng-click="sortBy='date';reverse=!reverse">Date</th>
-                                    <th ng-click="sortBy='status';reverse=!reverse">Status</th>
-                                    <th ng-click="sortBy='reason';reverse=!reverse">Reason</th>
+                                    <th ng-click="doSort('id')">ID</th>
+                                    <th ng-click="doSort('user')">User</th>
+                                    <th ng-click="doSort('date')">Date</th>
+                                    <th ng-click="doSort('status')">Status</th>
+                                    <th ng-click="doSort('reason')">Reason</th>
                                     <th></th>
                                   </tr>
                                   <tr ng-repeat="category in categories | filter:categoryFilter | orderBy:sortBy:reverse">
@@ -187,19 +187,7 @@
                 </div><!-- ./wrapper -->
                 <script src="scripts/angular.js"></script>
 
-                <script>
-                  // function CategoriesController($scope) {
-                  //   $scope.sortBy = 'user';
-                  //   $scope.reverse = false;
-
-                  //   $scope.categories= [{id:'123', user:'shashi', date:'2014-07-12', status: 'approved', reason: 'lkscla'},{id:'456', user:'aseem', date:'2013-01-02', status: 'failed', reason: 'bjhcjsbcj'},{id:'789', user:'sajal', date:'2016-03-01', status: 'pending', reason: 'kjahsijkanm'},{id:'143', user:'maximus', date:'2002-01-08', status: 'corrupted', reason: 'dskjcbka,nm'},{id:'233', user:'munshi', date:'2004-03-10', status: 'chomu', reason: 'lkajsiodlksjh'}];
-
-                  //   $scope.doSort = function(propName) {
-                  //     $scope.sortBy = propName;
-                  //     $scope.reverse = !$scope.reverse;
-                  //   };
-                  // }
-                </script>
+                <script src="app/controllers/categoriesController.js"></script>
 
                 <!-- // <script src="app/controllers/categoriesController.js"></script> -->
 
