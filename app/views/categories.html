@@ -1,84 +1,3 @@
-<div class="wrapper">
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo"><b>HARDWERA</b></a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="glyphicon glyphicon-user"></i>
-              <span>Shashi <i class="caret"></i></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="user-footer">
-                <div>
-                  <a href="login.html"><i class="fa fa-gear"></i>
-                    <span>&nbsp;Settings</span></a>
-                  </div>
-                </li>
-                <li class="user-footer">
-                  <div>
-                    <a href="login.html"><i class="fa fa-sign-out"></i>
-                      <span>&nbsp;Sign out</span></a>
-                    </div>
-                  </li>
-                </ul>              
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <!-- search form -->
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li>
-              <a href="index.html">
-                <i class="fa fa-dashboard"></i>
-                <span>&nbsp;Dashboard</span>
-              </a>
-            </li>
-            <li class="active">
-              <a href="category.html">
-                <i class="fa fa-th"></i>
-                <span>&nbsp;Categories</span>
-              </a>
-            </li>
-            <li>
-              <a href="product.html">
-                <i class="fa fa-wrench"></i>
-                <span>&nbsp;Products</span>
-              </a>
-            </li>
-            <li>
-              <a href="order.html">
-                <i class="fa fa-pencil-square-o"></i>
-                <span>&nbsp;Orders</span>
-              </a>
-            </li>
-            <li>
-              <a href="user.html">
-                <i class="fa fa-users"></i>
-                <span>&nbsp;Users</span>
-              </a>
-            </li>
-
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
 
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="content-wrapper">
@@ -119,7 +38,7 @@
                         <th ng-click="doSort('reason')">Reason</th>
                         <th></th>
                       </tr>
-                      <tr ng-repeat="category in categories | filter:categoryFilter | orderBy:sortBy:reverse">
+                      <tr ng-repeat="category in categories | filter:categoryFilter | orderBy:sortBy:reverse" ng-cloak>
                         <td> {{ category.id }} </td>
                         <td> {{ category.user }} </td>
                         <td> {{ category.date | date:'longDate' }} </td>
@@ -138,10 +57,4 @@
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-      </footer>
-      </div>
+     
